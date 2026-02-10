@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Foundry Design System — DV Pinnacle
+ * All colors, typography, elevation, and spacing tokens.
+ */
+
+@layer base {
+  :root {
+    /* ── Foundry Semantic UI Tokens (Light Theme) ── */
+    --background: 0 0% 94.9%;
+    --foreground: 244 55% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 244 55% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 244 55% 15%;
+
+    --primary: 266 50% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 317 65% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 1% 97%;
+    --muted-foreground: 244 7% 42%;
+
+    --accent: 240 1% 97%;
+    --accent-foreground: 244 55% 15%;
+
+    --destructive: 0 74% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 266 50% 50%;
+
+    --radius: 0.75rem;
+
+    /* ── Foundry Color Primitives ── */
+    --plum-900: #180d26;
+    --plum-800: #30194d;
+    --plum-700: #472673;
+    --plum-600: #5f3399;
+    --plum-500: #7740bf;
+    --plum-400: #9266cc;
+    --plum-300: #ad8cd9;
+    --plum-200: #c9b3e5;
+    --plum-100: #e4d9f2;
+    --plum-50: #f1ecf9;
+    --plum-25: #faf7fc;
+
+    --berry-700: #7e1b62;
+    --berry-600: #a82483;
+    --berry-500: #d22da3;
+    --berry-400: #db57b6;
+    --berry-300: #e481c8;
+    --berry-100: #f6d5ed;
+    --berry-50: #fbeaf6;
+
+    --grass-700: #2e6b38;
+    --grass-600: #3d8f4b;
+    --grass-500: #4db35e;
+    --grass-300: #94d19e;
+    --grass-100: #dbf0df;
+    --grass-50: #edf7ef;
+    --grass-25: #f8fcf9;
+
+    --turquoise-700: #2e686b;
+    --turquoise-500: #4daeb3;
+    --turquoise-300: #94ced1;
+    --turquoise-100: #dbeff0;
+    --turquoise-25: #f8fcfc;
+
+    --tomato-700: #7e1b1b;
+    --tomato-500: #d22d2d;
+    --tomato-300: #e48181;
+    --tomato-100: #f6d5d5;
+    --tomato-50: #fbeaea;
+    --tomato-25: #fdf7f7;
+
+    --orange-700: #8e3b0b;
+    --orange-600: #be4f0e;
+    --orange-500: #ed6212;
+    --orange-100: #fbe0d0;
+    --orange-50: #fdefe7;
+    --orange-25: #fef9f6;
+
+    --lemon-500: #e6ac19;
+    --lemon-100: #faeed1;
+
+    --sky-500: #3382cc;
+    --sky-100: #d6e6f5;
+    --sky-50: #ebf3fa;
+
+    --cool-900: #14113b;
+    --cool-800: #2a274b;
+    --cool-700: #444755;
+    --cool-600: #5b5f71;
+    --cool-500: #71768e;
+    --cool-400: #8e92a4;
+    --cool-300: #aaadbb;
+
+    --neutral-700: #4d4d4d;
+    --neutral-500: #808080;
+    --neutral-300: #b3b3b3;
+    --neutral-200: #cccccc;
+    --neutral-100: #e6e6e6;
+    --neutral-50: #f2f2f2;
+    --neutral-25: #fafafa;
+    --white: #ffffff;
+
+    /* ── Foundry Elevation (Airbnb-inspired) ── */
+    --elevation-rest: 0 1px 2px rgba(0,0,0,0.08);
+    --elevation-raised: 0 2px 8px rgba(0,0,0,0.10);
+    --elevation-hover: 0 4px 16px rgba(0,0,0,0.14);
+    --elevation-overlay: 0 8px 28px rgba(0,0,0,0.18);
+    --elevation-sticky: 0 2px 8px rgba(0,0,0,0.12);
+
+    /* ── Layout ── */
+    --header-height: 56px;
+    --filter-bar-height: 48px;
+
+    /* ── Shadows (shadcn compat) ── */
+    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);
+    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);
+    --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 2px 4px -1px hsl(0 0% 0% / 0.10);
+    --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 4px 6px -1px hsl(0 0% 0% / 0.10);
+    --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 8px 10px -1px hsl(0 0% 0% / 0.10);
+    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+    --spacing: 0.25rem;
+
+    --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ── Focus States ── */
+*:focus-visible {
+  outline: 2px solid var(--plum-300);
+  outline-offset: 2px;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--neutral-200); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--neutral-500); }
